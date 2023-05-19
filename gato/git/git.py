@@ -147,7 +147,8 @@ class Git:
                 if os.path.isfile(wf_p):
                     with open(
                         wf_p,
-                        "r",
+                        "r", 
+                        encoding="utf8"
                     ) as wf_in:
                         wf_yml = wf_in.read()
 
