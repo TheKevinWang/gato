@@ -1,6 +1,6 @@
 
 from colorama import Fore, Style
-
+import os
 GREEN_PLUS = f'{Fore.GREEN}[+]{Style.RESET_ALL}'
 GREEN_EXCLAIM = f'{Fore.GREEN}[!]{Style.RESET_ALL}'
 YELLOW_DASH = f'{Fore.YELLOW}[-]{Style.RESET_ALL}'
@@ -49,3 +49,5 @@ SPLASH = """
                     ╙▀███████████████████████████████████▀
                              `╙▀▀▀▀███████████████▀▀╙
     """  # noqa: E501
+if os.name == 'nt':
+  SPLASH = SPLASH.encode('cp1252', errors='replace')
