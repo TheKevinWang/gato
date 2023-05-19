@@ -493,7 +493,7 @@ class Enumerator:
         if clone and self.__perform_clone_enumeration(repository):
             runner_detected = True
 
-        if runner_detected:
+        if True: #runner_detected:
             # Only display permissions (beyond having none) if runner is
             # detected.
             self.__print_attack_recommendations(repository)
