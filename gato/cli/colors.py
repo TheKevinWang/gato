@@ -50,4 +50,4 @@ SPLASH = """
                              `╙▀▀▀▀███████████████▀▀╙
     """  # noqa: E501
 if os.name == 'nt':
-  SPLASH = SPLASH.encode('cp1252', errors='replace')
+  SPLASH = SPLASH.encode('cp1252', errors='replace').decode('cp1252')
