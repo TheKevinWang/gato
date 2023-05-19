@@ -17,7 +17,10 @@ from gato.util.arg_utils import WriteableDir
 from gato.util.arg_utils import ReadableFile
 import gato.git as git
 from gato.cli import Output
-
+from colorama import just_fix_windows_console
+just_fix_windows_console()
+import sys
+sys.stdout.reconfigure(line_buffering=True)
 
 REQUIRED_GIT_VERSION = "2.27"
 
@@ -64,7 +67,7 @@ def cli(args):
     Output(arguments.supress, not arguments.no_color)
 
     validate_arguments(arguments, parser)
-    validate_git_config(parser)
+    #validate_git_config(parser)
 
     Output.splash()
 
